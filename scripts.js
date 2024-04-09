@@ -6,7 +6,7 @@ let input = document.querySelector('input')
 let button = document.querySelector('button')
 
 
-const contacts = [
+const list = [
     { name: 'Joao', number: '(31) 97852-4627', email: 'joao1502@gmail.com' },
     { name: 'Caio', number: '(31) 99252-7622', email: 'caio5211@gmail.com' },
     { name: 'Gustavo', number: '(31) 98802-4631', email: 'gustavo0021@gmail.com' },
@@ -17,12 +17,12 @@ const contacts = [
 
 function search() {
 
-    for (let i = 0; i < contacts.length ;i++) {
+    for (const contacts of list) {
 
-        if (input.value.toLowerCase() === contacts[i].name.toLowerCase()) {
-            contact.innerHTML = `Contato Encontrado Nome: ${contacts[i].name}`
-            number.innerHTML = `Número: ${contacts[i].number}`
-            email.innerHTML = `Email: ${contacts[i].email}`
+        if (input.value.toLowerCase() === contacts.name.toLowerCase()) {
+            contact.innerHTML = `Contato Encontrado Nome: ${contacts.name}`
+            number.innerHTML = `Número: ${contacts.number}`
+            email.innerHTML = `Email: ${contacts.email}`
             notfound.innerHTML = ''
 
             break
